@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build 
-        run: mkdir build 
-             cd build 
-             cmake ..
+        run: cmake ..
              make
 
       - name: Run tests
