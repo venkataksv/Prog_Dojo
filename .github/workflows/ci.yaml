@@ -1,4 +1,4 @@
-name: C++ CI with CMake
+name: Dojo_Status
 
 on:
   push:
