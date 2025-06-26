@@ -1,6 +1,7 @@
 ## Prog Dojo
 
-Experiments to run basic programs with a TDD driven practice using gtest 
+Experiments to run basic programs with a TDD driven practice using gtest and
+also experimenting git features like Github Actions 
 
 ### Build the project
 
