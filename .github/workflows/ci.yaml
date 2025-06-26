@@ -20,3 +20,8 @@ jobs:
 
     - name: Build project
       run: cmake --build ${{github.workspace}}/build
+
+    - name: Run tests
+      working-directory: ${{github.workspace}}/build
+      # Run tests after building
+      run: ./runStackTests
