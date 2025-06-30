@@ -21,6 +21,10 @@ add_executable(
   test_stack.cpp
 )
 
+add_executable(graph
+graph.cpp)
+
+
 target_link_libraries(
   runStackTests
   GTest::gtest_main # this will not require explicitly defining a main function for the test exec

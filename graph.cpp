@@ -1,47 +1,28 @@
-#include <iostream>
-#include <vector>
+#include "graph.h"
 
-class Graph
+
+void Graph::printGraph()
 {
-    public:
-    int vertices;
-    bool isdirected;
-    std::vector<std::vector<int>> adjMatrix;
 
-    Graph(int nVertices, bool directed) : vertices(nVertices), isdirected(directed)
+    for(int i=0;i<vertices;i++)
     {
-        for(int i=0;i<nVertices;i++)
+        for(int j=0;j<vertices;j++)
         {
-            adjMatrix.push_back(std::vector<int>(nVertices,0)); 
+            std::cout<<adjMatrix[i][j]<<" ";
         }
+        std::cout<<"\n";
     }
+} 
 
 
-    void printGraph()
+void Graph::addEdge(int u, int v, int w)
+{
+    adjMatrix[u][v] = w;
+    if(!isdirected)
     {
-
-        for(int i=0;i<vertices;i++)
-        {
-            for(int j=0;j<vertices;j++)
-            {
-                std::cout<<adjMatrix[i][j]<<" ";
-            }
-            std::cout<<"\n";
-        }
-    } 
-
-
-    void addEdge(int u, int v, int w)
-    {
-        adjMatrix[u][v] = w;
-        if(!isdirected)
-        {
-            adjMatrix[v][u] = w;
-        }
+        adjMatrix[v][u] = w;
     }
-
-
-};
+}
 
 
 int main()
